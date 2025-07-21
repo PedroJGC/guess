@@ -7,8 +7,8 @@ export function LettersUsed() {
       <h5>Letras utilizadas</h5>
 
       <div>
-        <Letter size="small" value="R" />
-        <Letter size="small" value="X" />
+        <Letter color="correct" size="small" value="R" />
+        <Letter color="wrong" size="small" value="X" />
       </div>
     </div>
   )
