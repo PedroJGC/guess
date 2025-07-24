@@ -48,9 +48,9 @@ export default function App() {
     }
 
     const hits = challenge.word
-      .toLowerCase()
+      .toUpperCase()
       .split('')
-      .filter((char) => char === value).length
+      .filter((char) => char === value.toUpperCase()).length
 
     const correct = hits > 0
     const currentScore = score + hits
@@ -82,7 +82,13 @@ export default function App() {
               (used) => used.value.toUpperCase() === letter.toUpperCase()
             )
 
-            return <Letter key={index} value={letterUsed?.value} />
+            return (
+              <Letter
+                color={letterUsed?.correct ? 'correct' : 'default'}
+                key={index}
+                value={letterUsed?.value}
+              />
+            )
           })}
         </div>
 
